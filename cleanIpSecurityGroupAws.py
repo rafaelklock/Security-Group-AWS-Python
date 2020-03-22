@@ -6,7 +6,6 @@ import sys
 
 ec2 = boto3.client('ec2')
 security_group_id = 'sg-080ce2a7c35e04bca'
-security_group_name = 'PortKnockerSegware'
 
 ip_revoke = sys.argv[1]
 

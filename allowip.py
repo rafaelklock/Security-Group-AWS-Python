@@ -6,7 +6,6 @@ import sys
 
 ec2 = boto3.client('ec2')
 security_group_id = 'sg-080ce2a7c35e04bca'
-security_group_name = 'PortKnockerSegware'
 
 ip_allow = sys.argv[1]
 
@@ -16,7 +15,7 @@ retorno = ec2.authorize_security_group_ingress(
             {'IpProtocol': '-1',
              'IpRanges': [
 		{'CidrIp': ip_allow,
-		 'Description': 'Allow PortKnock - Segware'
+		 'Description': 'Allowed by PortKnock'
                 }]
 	    }
         ])
